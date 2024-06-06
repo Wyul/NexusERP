@@ -31,11 +31,12 @@ Para utilizar o banco de dados, siga as instruções abaixo:
 
 ## Contribuidores
 
-- Gabriela Demossi
-- Gabriel Morin Werner
-- Guilherme Depiné
+- [Gabriela Demossi] (https://github.com/Gabii1901)
+- [Gabriel Morin Werner] (https://github.com/Wyul)
+- [Guilherme Depiné] (https://github.com/depinegui)
+- [Kauan Amélio Cipriani] (https://github.com/KauanCipriani)
 - Ivan da Silva
-- Vitor Hugo Konzen
+- [Vitor Hugo Konzen] (https://github.com/vitorhk7)
 
 ## Contato
 
