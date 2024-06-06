@@ -1,4 +1,4 @@
-# Mecânica - Banco de Dados
+# NexusERP - Banco de Dados
 
 # Projeto de Banco de Dados - FM Oficina e Mecânica
 
