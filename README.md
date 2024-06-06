@@ -1,4 +1,4 @@
-# Mecanica - Banco de Dados
+# Mecânica - Banco de Dados
 
 # Projeto de Banco de Dados - FM Oficina e Mecânica
 
