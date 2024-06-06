@@ -35,7 +35,7 @@ Para utilizar o banco de dados, siga as instruções abaixo:
 - [Gabriel Morin Werner](https://github.com/Wyul)
 - [Guilherme Depiné](https://github.com/depinegui)
 - [Kauan Amélio Cipriani](https://github.com/KauanCipriani)
-- Ivan da Silva
+- [Ivan da Silva](https://github.com/duckbrave)
 - [Vitor Hugo Konzen](https://github.com/vitorhk7)
 
 ## Contato
