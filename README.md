@@ -10,7 +10,7 @@ O projeto visa modelar o banco de dados de uma empresa fictícia chamada FM Ofic
 
 ## Estrutura do Banco de Dados
 
-O banco de dados é composto pelas seguintes tabelas:
+O banco de dados é composto pelas seguintes tabelas:dsdsdsd
 
 - **empresa**: Armazena informações sobre a empresa, como ID, nome, CNPJ, localização e telefone.
 - **clientes**: Contém dados dos clientes da empresa, incluindo ID, nome, telefone, localização, sexo, CPF/CNPJ, inscrição estadual e e-mail.
