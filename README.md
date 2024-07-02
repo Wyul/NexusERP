@@ -2,7 +2,7 @@
 
 # Projeto de Banco de Dados - FM Oficina e Mecânica
 
-Este é o repositório do projeto de banco de dados da Empresa FM Oficina e Mecânica, desenvolvido pelos alunos Gabriela Demossi, Gabriel Morin Werner, Guilherme Depiné, Ivan da Silva e Vitor Hugo Konzen, para a disciplina de Banco de Dados ministrada pelo professor Roberson Alves.
+Este é o repositório do projeto de banco de dados da Empresa FM Oficina e Mecânica, desenvolvido pelos alunos Gabriela Demossi, Gabriel Morin Werner, Guilherme Depiné, Kauan Cipriani, Ivan da Silva e Vitor Hugo Konzen, para a disciplina de Banco de Dados ministrada pelo professor Roberson Alves.
 
 ## Descrição do Projeto
 
