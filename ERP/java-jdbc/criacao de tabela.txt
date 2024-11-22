@@ -1,0 +1,116 @@
+-- Tabela: permissao
+CREATE TABLE permissao (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    descricao TEXT
+);
+
+-- Tabela: usuario
+CREATE TABLE usuario (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    usuario VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    perfil VARCHAR(50),
+    estado BOOLEAN DEFAULT TRUE,
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabela: usuario_permissao
+CREATE TABLE usuario_permissao (
+    permissao_id INT NOT NULL REFERENCES permissao(id),
+    usuario_id INT NOT NULL REFERENCES usuario(id),
+    PRIMARY KEY (permissao_id, usuario_id)
+);
+
+-- Tabela: cliente
+CREATE TABLE cliente (
+    id SERIAL PRIMARY KEY,
+    cpf VARCHAR(14) NOT NULL UNIQUE,
+    telefone VARCHAR(20),
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    rua VARCHAR(150),
+    bairro VARCHAR(100),
+    cidade VARCHAR(100),
+    cnpj VARCHAR(18),
+    razao_social VARCHAR(150),
+    ic_cli VARCHAR(20),
+    representante VARCHAR(100),
+    estado BOOLEAN DEFAULT TRUE,
+    for_cli_trans BOOLEAN DEFAULT FALSE
+);
+
+-- Tabela: agendamento
+CREATE TABLE agendamento (
+    id SERIAL PRIMARY KEY,
+    id_cliente INT NOT NULL REFERENCES cliente(id),
+    cnpj VARCHAR(18),
+    telefone VARCHAR(20),
+    nome_cliente VARCHAR(100),
+    nome_veiculo VARCHAR(100),
+    marca_veiculo VARCHAR(100),
+    data_entrada TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status CHAR(1) CHECK (status IN ('A', 'P', 'F')),
+    defeito TEXT,
+    obs_age TEXT
+);
+
+-- Tabela: estoque
+CREATE TABLE estoque (
+    id_prod SERIAL PRIMARY KEY,
+    codigo_pro VARCHAR(50) UNIQUE NOT NULL,
+    nome_pro VARCHAR(100) NOT NULL,
+    quant_pro INT NOT NULL,
+    estado BOOLEAN DEFAULT TRUE,
+    prc_custo NUMERIC(10, 2) NOT NULL,
+    prc_venda NUMERIC(10, 2) NOT NULL,
+    tipo_emba VARCHAR(50),
+    data_cad TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    prod_ser BOOLEAN DEFAULT FALSE
+);
+
+-- Tabela: fornecedor
+CREATE TABLE fornecedor (
+    id SERIAL PRIMARY KEY,
+    cnpj VARCHAR(18) NOT NULL UNIQUE,
+    nome VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20),
+    email VARCHAR(100),
+    rua VARCHAR(150),
+    data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    ie_for VARCHAR(50),
+    razao_social VARCHAR(150),
+    representante VARCHAR(100),
+    bairro VARCHAR(100),
+    cidade VARCHAR(100)
+);
+
+-- Tabela: venda_nfe
+CREATE TABLE venda_nfe (
+    id SERIAL PRIMARY KEY,
+    id_cliente INT NOT NULL REFERENCES cliente(id),
+    cnpj VARCHAR(18),
+    telefone VARCHAR(20),
+    nome_cliente VARCHAR(100),
+    nome_veiculo VARCHAR(100),
+    marca_veiculo VARCHAR(100),
+    forma_pagamento VARCHAR(50),
+    valor NUMERIC(10, 2),
+    peca VARCHAR(100),
+    defeito TEXT,
+    data_venda TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    cod_peca VARCHAR(50) REFERENCES estoque(codigo_pro),
+    quantidade INT,
+    id_usuario INT NOT NULL REFERENCES usuario(id),
+    nome_usuario VARCHAR(100)
+);
+
+-- Tabela: detalhes_venda
+CREATE TABLE detalhes_venda (
+    id SERIAL PRIMARY KEY,
+    id_venda INT NOT NULL REFERENCES venda_nfe(id),
+    cod_prod VARCHAR(50) REFERENCES estoque(codigo_pro),
+    quantidade INT NOT NULL,
+    preco_unitario NUMERIC(10, 2) NOT NULL
+);
