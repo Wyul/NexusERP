@@ -114,11 +114,6 @@ Um sistema completo para a gestão de clientes, fornecedores, agendamentos, vend
 /screenshots             # Imagens do sistema para documentação
 ```
 
-
-Segue o README.md em linguagem Markdown, que é usada em arquivos de repositórios Git:
-
-markdown
-Copiar código
 # Sistema de Gestão Empresarial
 
 Um sistema completo para a gestão de clientes, fornecedores, agendamentos, vendas e produtos, com interface gráfica em Java (Swing) e integração com banco de dados.
