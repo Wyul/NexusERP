@@ -57,7 +57,8 @@ Um sistema completo para a gestão de clientes, fornecedores, agendamentos, vend
 git clone https://github.com/usuario/repositorio.git
 
 # Configure o banco de dados
-# Importe o arquivo SQL disponível no diretório `/db` para criar as tabelas.
+
+Importe o arquivo SQL disponível no diretório `/db` para criar as tabelas.
 
 # Configure a conexão no arquivo ConexaoSQL.java
 private static final String URL = "jdbc:mysql://localhost:5432/nome_do_banco";
