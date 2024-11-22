@@ -128,7 +128,7 @@ CREATE TABLE auditoria (
     data_operacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Criando Índices (Exemplo)
+-- Criando Índices 
 CREATE INDEX idx_agendamento_status ON agendamento(status);
 CREATE INDEX idx_venda_nfe_cliente ON venda_nfe(id_cliente);
 
