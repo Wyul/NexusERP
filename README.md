@@ -1,43 +1,221 @@
-# NexusERP - Banco de Dados
+# Sistema de Gestão Empresarial
 
-# Projeto de Banco de Dados - FM Oficina e Mecânica
+Um sistema completo para a gestão de clientes, fornecedores, agendamentos, vendas e produtos, com interface gráfica em Java (JFRAME) e integração com banco de dados.
 
-Este é o repositório do projeto de banco de dados da Empresa FM Oficina e Mecânica, desenvolvido pelos alunos Gabriela Demossi, Gabriel Morin Werner, Guilherme Depiné, Kauan Cipriani, Ivan da Silva e Vitor Hugo Konzen, para a disciplina de Banco de Dados ministrada pelo professor Roberson Alves.
+---
 
-## Descrição do Projeto
+## 📋 Funcionalidades
 
-O projeto visa modelar o banco de dados de uma empresa fictícia chamada FM Oficina e Mecânica. O banco de dados foi projetado para armazenar informações sobre clientes, funcionários, serviços, agendamentos, estoque, fornecedores e a própria empresa.
+- **Cadastro e Consulta**:
+  - Clientes
+  - Fornecedores
+  - Agendamentos
+  - Produtos
+  - Vendas
+  
+- **Interface Gráfica**:
+  - Layout amigável e intuitivo.
+  - Tela de login com validação de usuário e senha.
+  - Botões e campos personalizados.
 
-## Estrutura do Banco de Dados
+- **Banco de Dados**:
+  - Persistência de dados utilizando PostgreSQL.
+  - Backup e Restore
 
-O banco de dados é composto pelas seguintes tabelas:
+- **Polimorfismo e Orientação a Objetos**:
+  - Implementação modular baseada nos princípios da POO.
+  - Utilização de herança, polimorfismo e encapsulamento.
 
-- **empresa**: Armazena informações sobre a empresa, como ID, nome, CNPJ, localização e telefone.
-- **clientes**: Contém dados dos clientes da empresa, incluindo ID, nome, telefone, localização, sexo, CPF/CNPJ, inscrição estadual e e-mail.
-- **funcionarios**: Registra informações dos funcionários, como ID, nome, data de contratação, CPF/CNPJ, localização, cargo e ID da empresa.
-- **servico**: Armazena detalhes sobre os serviços prestados, como ID, ID do veículo, status e data de encerramento.
-- **agendamento**: Mantém registros dos agendamentos de serviços, incluindo ID do serviço, ID do funcionário, descrição do serviço e data de entrada.
-- **estoque**: Contém informações sobre o estoque de produtos, como ID, nome, referência, código de barras, NCM e ID da empresa.
-- **prod_servico**: Relaciona produtos aos serviços prestados, incluindo ID do produto, ID do serviço, valor e quantidade.
-- **fornecedor**: Registra dados dos fornecedores, como ID, nome, CNPJ, localização, telefone, inscrição estadual e ID da empresa.
+---
 
-## Como Usar
+## 🚀 Tecnologias Utilizadas
 
-Para utilizar o banco de dados, siga as instruções abaixo:
+- **Linguagem**: Java 11+
+- **Bibliotecas**:
+  - JFRAME (interface gráfica)
+  - JDBC (conexão com banco de dados)
+- **Banco de Dados**:
+  - MySQL ou PostgreSQL
+- **IDE**:
+  - Eclipse ou IntelliJ IDEA
 
-1. Execute os scripts SQL fornecidos para criar as tabelas.
-2. Importe os dados necessários para as tabelas.
-3. Utilize consultas SQL para acessar e manipular os dados conforme necessário.
+---
 
-## Contribuidores
+## 🖥️ Estrutura do Projeto
 
-- [Gabriela Demossi](https://github.com/Gabii1901)
-- [Gabriel Morin Werner](https://github.com/Wyul)
-- [Guilherme Depiné](https://github.com/depinegui)
-- [Kauan Amélio Cipriani](https://github.com/KauanCipriani)
-- [Ivan da Silva](https://github.com/duckbrave)
-- [Vitor Hugo Konzen](https://github.com/vitorhk7)
+```plaintext
+/src
+ ├── front                # Telas do sistema (Swing)
+ ├── gestao               # Modelos de dados (Cliente, Agendamento, etc.)
+ ├── modelo
+ │    ├── dominio.dao     # DAO para acesso ao banco de dados
+ │    ├── conexao         # Configuração da conexão com o banco
+/db                      # Scripts SQL para criar as tabelas
+/screenshots             # Imagens do sistema para documentação
 
-## Contato
+##
+Segue o README.md em linguagem Markdown, que é usada em arquivos de repositórios Git:
 
-Para mais informações, entre em contato com os autores do projeto.
+markdown
+Copiar código
+# Sistema de Gestão Empresarial
+
+Um sistema completo para a gestão de clientes, fornecedores, agendamentos, vendas e produtos, com interface gráfica em Java (Swing) e integração com banco de dados.
+
+---
+
+## 📋 Funcionalidades
+
+- **Cadastro e Consulta**:
+  - Clientes
+  - Fornecedores
+  - Agendamentos
+  - Produtos
+  - Vendas (NF-e)
+  
+- **Interface Gráfica**:
+  - Layout amigável e intuitivo.
+  - Tela de login com validação de usuário e senha.
+  - Botões e campos personalizados.
+
+- **Banco de Dados**:
+  - Persistência de dados utilizando MySQL ou PostgreSQL.
+  - Suporte a operações CRUD para todas as entidades.
+
+- **Polimorfismo e Orientação a Objetos**:
+  - Implementação modular baseada nos princípios da POO.
+  - Utilização de herança, polimorfismo e encapsulamento.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- **Linguagem**: Java 11+
+- **Bibliotecas**:
+  - Swing (interface gráfica)
+  - JDBC (conexão com banco de dados)
+- **Banco de Dados**:
+  - MySQL ou PostgreSQL
+- **IDE**:
+  - Eclipse ou IntelliJ IDEA
+
+---
+
+## 🖥️ Estrutura do Projeto
+
+```plaintext
+/src
+ ├── front                # Telas do sistema (Swing)
+ ├── gestao               # Modelos de dados (Cliente, Agendamento, etc.)
+ ├── modelo
+ │    ├── dominio.dao     # DAO para acesso ao banco de dados
+ │    ├── conexao         # Configuração da conexão com o banco
+/db                      # Scripts SQL para criar as tabelas
+/screenshots             # Imagens do sistema para documentação
+```
+
+
+Segue o README.md em linguagem Markdown, que é usada em arquivos de repositórios Git:
+
+markdown
+Copiar código
+# Sistema de Gestão Empresarial
+
+Um sistema completo para a gestão de clientes, fornecedores, agendamentos, vendas e produtos, com interface gráfica em Java (Swing) e integração com banco de dados.
+
+---
+
+## 📋 Funcionalidades
+
+- **Cadastro e Consulta**:
+  - Clientes
+  - Fornecedores
+  - Agendamentos
+  - Produtos
+  - Vendas
+  
+- **Interface Gráfica**:
+  - Layout amigável e intuitivo.
+  - Tela de login com validação de usuário e senha.
+  - Botões e campos intuitivos.
+
+- **Banco de Dados**:
+  - Persistência de dados utilizando PostgreSQL.
+
+- **Polimorfismo e Orientação a Objetos**:
+  - Implementação modular baseada nos princípios da POO.
+  - Utilização de herança, polimorfismo e encapsulamento.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- **Linguagem**: Java 11+
+- **Bibliotecas**:
+  - JFRAME (interface gráfica)
+  - JDBC (conexão com banco de dados)
+- **Banco de Dados**:
+  - MySQL ou PostgreSQL
+- **IDE**:
+  - Eclipse ou IntelliJ IDEA
+
+---
+
+## 🖥️ Estrutura do Projeto
+
+```plaintext
+/src
+ ├── front                # Telas do sistema (JFRAME)
+ ├── gestao               # Modelos de dados (Cliente, Agendamento, etc.)
+ ├── modelo
+ │    ├── dominio.dao     # DAO para acesso ao banco de dados
+ │    ├── conexao         # Configuração da conexão com o banco
+/db                      # Scripts SQL para criar as tabelas
+/screenshots             # Imagens do sistema para documentação
+```
+
+## ⚙️ Como Executar o Sistema
+
+# Clone este repositório
+git clone https://github.com/usuario/repositorio.git
+
+# Configure o banco de dados
+# Importe o arquivo SQL disponível no diretório `/db` para criar as tabelas.
+
+# Configure a conexão no arquivo ConexaoSQL.java
+private static final String URL = "jdbc:mysql://localhost:5432/nome_do_banco";
+private static final String USER = "usuario";
+private static final String PASSWORD = "senha";
+
+# Execute o método main na classe MainFrame para iniciar o sistema
+MainFrame.java
+
+
+## 🛠️ Funcionalidades Detalhadas
+
+Clientes:
+
+Cadastro de clientes com validação de CNPJ ou CPF.
+Consulta por nome ou CNPJ/CPF.
+
+Fornecedores:
+
+Cadastro completo com dados fiscais (CNPJ, IE) e contato.
+Listagem e busca avançada.
+
+Agendamentos:
+
+Agendamento de serviços vinculados a clientes e veículos.
+Persistência de data e situação (Aberto/Fechado/Pendente).
+
+Produtos:
+
+Cadastro de produtos com descrição, preço e categoria.
+
+Vendas:
+
+Registro de vendas com informações detalhadas.
+Suporte a produtos e emissão de notas fiscais.
+
+
+
