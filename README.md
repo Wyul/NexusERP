@@ -59,10 +59,10 @@ git clone https://github.com/Wyul/NexusERP/
 # Configure o banco de dados
 
 Restaure o backup do banco de dados que está no caminho NexusERP/ERP/java-jdbc, com nome erp.backup (backup geradp via função do sistema).
-Pode ser feito via pgadmin4, definindo a versão do Postgres 17 (somente nesta versão vai subir o backup)
+Pode ser feito via pgadmin4, definindo a versão do Postgres 17 (somente nesta versão vai subir o backup).
 
 
-lembre de usar trocar a senha do banco de dados "ERP/java-jdbc/src/main/java/modelo/dominio/dao/conexao/ConexaoSQL.java"
+lembre de usar trocar a senha do banco de dados "ERP/java-jdbc/src/main/java/modelo/dominio/dao/conexao/ConexaoSQL.java".
 
 # Configure a conexão no arquivo ConexaoSQL.java
 private static final String URL = "jdbc:jdbc:postgresql://localhost:5432/erp";
