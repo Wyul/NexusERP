@@ -54,16 +54,20 @@ Um sistema completo para a gestão de clientes, fornecedores, agendamentos, vend
 ## ⚙️ Como Executar o Sistema
 
 # Clone este repositório
-git clone https://github.com/usuario/repositorio.git
+git clone https://github.com/Wyul/NexusERP/
 
 # Configure o banco de dados
 
-Importe o arquivo SQL disponível no diretório `/db` para criar as tabelas.
+Restaure o backup do banco de dados que está no caminho NexusERP/ERP/java-jdbc, com nome erp.backup (backup geradp via função do sistema).
+Pode ser feito via pgadmin4, definindo a versão do Postgres 17 (somente nesta versão vai subir o backup)
+
+
+lembre de usar trocar a senha do banco de dados "ERP/java-jdbc/src/main/java/modelo/dominio/dao/conexao/ConexaoSQL.java"
 
 # Configure a conexão no arquivo ConexaoSQL.java
-private static final String URL = "jdbc:mysql://localhost:5432/nome_do_banco";
-private static final String USER = "usuario";
-private static final String PASSWORD = "senha";
+private static final String URL = "jdbc:jdbc:postgresql://localhost:5432/erp";
+private static final String USER = "postgres";
+private static final String PASSWORD = "1234"; // precisa trocar sua senha para do banco
 
 # Execute o método main na classe MainFrame para iniciar o sistema
 MainFrame.java
