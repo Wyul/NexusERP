@@ -32,9 +32,9 @@ Um sistema completo para a gestão de clientes, fornecedores, agendamentos, vend
   - JFRAME (interface gráfica)
   - JDBC (conexão com banco de dados)
 - **Banco de Dados**:
-  - MySQL ou PostgreSQL
+  - PostgreSQL
 - **IDE**:
-  - Eclipse ou IntelliJ IDEA
+  - Eclipse
 
 ---
 
